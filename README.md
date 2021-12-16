@@ -9,6 +9,7 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
+  -13-Elk-Stack-Project_Resources_README/README/CyberClass/Scripts/Ansible/Filebeat/filebeat-playbook.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -24,28 +25,32 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?
 It distributes user requests among multiple servers. The jumpbox is the only ip that is public.
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
+- _TODO: What does Filebeat watch for?
+Filebeat monitors the log files or locations that you specify.
+- _TODO: What does Metricbeat record?
+Metricbeat records the metrics and statistics from the operation system and from services running on the server.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-|JumpBoxPro | Gateway  | 10.0.0.4  | Linux            |
-| Web-1     |Webserver|10.0.0.7   | Linux            |
-| Web-2     |Webserver|10.0.0.8   | Linux            |
-| Web-3     |Webserver|10.0.0.9   | Linux            |
+|JumpBoxPro | Gateway | 10.0.0.4   | Linux            |
+| Web-1     |Webserver| 10.0.0.7   | Linux            |
+| Web-2     |Webserver| 10.0.0.8   | Linux            |
+| Web-3     |Webserver| 10.0.0.9   | Linux            |
+
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- _TODO: Add whitelisted IP addresses
+
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
