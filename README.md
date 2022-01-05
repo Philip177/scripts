@@ -110,7 +110,17 @@ add the machine, its IP, and ansible_python_interpreter=/usr/bin/python3 to the 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?
 nano ansible.cfg
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+Update the install-elk.yml and filebeat-playbook.yml file to include the machine you want use the playbooks on by changing the hosts name on the 3rd line.
 - _Which URL do you navigate to in order to check that the ELK server is running?
+Run the playbook, and navigate to check that the installation worked as expected.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+nano ansible.cfg
+add the machine, its IP, and ansible_python_interpreter=/usr/bin/python3 to the hosts
+Ctrl + x to exit file
+in the folder that install-elk.yml is in, run: cp install-elk.yml /etc/ansible
+nano install-elk.yml /etc/ansible
+name: installing elk hosts: ELK-NET
+Ctrl + x to exit file
+ansible-playbook install-elk.yml
